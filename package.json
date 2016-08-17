@@ -1,0 +1,39 @@
+{
+  "name": "raml-runnable-doc",
+  "version": "1.0.0",
+  "description": "This package will generate human consumable and machine consumable artefacts from a raml file",
+  "main": "server.js",
+  "files": [
+    "dist/"
+  ],
+  "watch": {
+    "w": {
+      "patterns": [
+        "src",
+        "src/examples",
+        "test"
+      ],
+      "extensions": "js,jsx,ts,raml"
+    }
+  },
+  "scripts": {
+    "lint": "# tslint \"src/**/*.ts\"",
+    "typings": "typings",
+    "w": "rm -rf dist && clear && tsc && DEBUG=example node dist/list.js -d /home/phil/bayeslife/raml-1.0-examples/examples",
+    "watch": "npm-watch"
+  },
+  "keywords": [
+    "raml"
+  ],
+  "author": "Phil Tomlinson",
+  "devDependencies": {
+    "blue-tape": "^0.2.0",
+    "typescript": "^1.8.9",
+    "typings": "^0.7.9"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "raml-1-parser": "^0.2.32",
+    "yargs": "^4.8.1"
+  }
+}
