@@ -25,13 +25,19 @@ annotationTypes:
       headerName:
       headerValue:
 
-/users:
+
+
+/things:
   description: All the users
   get:
     responses:
       200:
         body:
           application/json:
+            example: |
+              {
+                property:  "A sample conforming to 0.8 syntax"
+              }
             examples:
               example1:
                 description: "An example with a structured example"

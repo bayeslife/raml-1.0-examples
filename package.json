@@ -19,7 +19,7 @@
   "scripts": {
     "lint": "# tslint \"src/**/*.ts\"",
     "typings": "typings",
-    "w": "rm -rf dist && clear && tsc && DEBUG=example node dist/list.js -d /home/phil/bayeslife/raml-1.0-examples/examples",
+    "w": "rm -rf dist && clear && tsc && DEBUG=example node dist/list.js -d ./examples",
     "watch": "npm-watch"
   },
   "keywords": [
