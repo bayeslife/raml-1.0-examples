@@ -1,7 +1,7 @@
 {
   "name": "raml-runnable-doc",
   "version": "1.0.0",
-  "description": "This package will generate human consumable and machine consumable artefacts from a raml file",
+  "description": "This package contains examples of raml 0.8 and 1.0 examples",
   "main": "server.js",
   "files": [
     "dist/"

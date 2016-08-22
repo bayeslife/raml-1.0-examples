@@ -2,30 +2,11 @@
 title: A CRUD API for Users and Groups
 
 schemas:
-  creditcard: !include CreditCard.json
+  creditcard:
+    type: !include CreditCard.json
 
-annotationTypes:
-  raml08:
-    description: "This indicates the example is to be included in the 08 raml file."
-    allowedTargets: Example
-  test-scenario:
-    description: "This identifes the test scenario so that a request and response can be associated."
-    type: string
-    allowedTargets: Example
-  test-type:
-    allowedTargets: Example
-    description: "This identifes the test as a positive or negative test"
-    properties:
-      expect:
-        enum: [ positive, negative ]
-  header:
-    allowedTargets: Example
-    description: "A name value pair"
-    properties:
-      headerName:
-      headerValue:
-
-
+uses:
+   example: annotations.1_0.yaml
 
 /things:
   description: All the users
@@ -68,8 +49,8 @@ annotationTypes:
                     <root><body/><root>
               example5:
                 description: An example with annotations
-                (test-scenario): scenario1
-                (test-type):
+                (example.test-scenario): scenario1
+                (example.test-type):
                   expect: positive
                 type: application-xml
                 isAnnotation: false
@@ -86,7 +67,7 @@ annotationTypes:
               example7:
                 description: "An example with the header values"
                 type: application-json
-                (header):
+                (example.header):
                   headerName: Authorization
                   headerValue: Bearer 123
                 value: {
