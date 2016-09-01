@@ -1,7 +1,7 @@
 {
   "name": "raml-runnable-doc",
   "version": "1.0.0",
-  "description": "This package contains examples of raml 0.8 and 1.0 examples",
+  "description": "This package contains examples of raml 0.8 and 1.0 examples and a utility to parse and list the examples",
   "main": "server.js",
   "files": [
     "dist/"
@@ -20,6 +20,10 @@
     "lint": "# tslint \"src/**/*.ts\"",
     "typings": "typings",
     "w": "rm -rf dist && clear && tsc && DEBUG=example node dist/list.js -d ./examples",
+    "w.1": "rm -rf dist && clear && tsc && DEBUG=example node dist/list.js -r ./examples/Example1.1_0.raml",
+    "w.2": "rm -rf dist && clear && tsc && DEBUG=example node dist/list.js -r ./examples/Example1.0_8.raml",
+    "w2": "rm -rf dist && clear && tsc && DEBUG=example node dist/list.js -d ./examples2",
+    "w3": "rm -rf dist && clear && tsc && DEBUG=example node dist/list.js -d ./examples3",
     "watch": "npm-watch"
   },
   "keywords": [

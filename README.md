@@ -21,3 +21,17 @@ Specifically I was interested to be able to represent
 - negative as well as positive examples
 - xml as well as json examples
 - annotating samples so that specific requests could be related to specific responses
+
+## Listing examples in raml files
+
+$ node dist/list.js -h
+This package contains examples of raml 0.8 and 1.0 examples and a utility to
+parse and list the examples
+
+dist/list.js
+
+Options:
+  -h, --help       Show help                                           [boolean]
+  --1.0.0          version                                             [boolean]
+  -d, --directory  List examples from all RAML files in a directory
+  -r, --file       List examples from a specific Raml file

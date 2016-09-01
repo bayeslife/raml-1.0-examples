@@ -6,7 +6,7 @@ schemas:
     type: !include CreditCard.json
 
 uses:
-   example: annotations.1_0.yaml
+  example: annotations.1_0.yaml
 
 /things:
   description: All the users
@@ -15,10 +15,6 @@ uses:
       200:
         body:
           application/json:
-            example: |
-              {
-                property:  "A sample conforming to 0.8 syntax"
-              }
             examples:
               example1:
                 description: "An example with a structured example"
